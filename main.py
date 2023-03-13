@@ -59,8 +59,14 @@ mileage integer NOT NULL,
 price integer NOT NULL);
 """
 
+#populate coupe table
+coupe_vehicles = """ 
+insert into COUPE_MODELS values
+('123abc321','Ashton Martin', 'Vanquish', 200, 115000),
+('asd748541', 'Audi', 'RS 7', 1200, 12500) """
+
 #calling statement
 connection = create_server_connection("localhost", "root", "student","exotic_dealership")
 #call work horse function to run query
-execute_query(connection, create_suv_table )
+execute_query(connection, coupe_vehicles )
 

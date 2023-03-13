@@ -85,7 +85,7 @@ def execute_query(connection, query):
     except Error as err:
         print(f"Error: {err}")
 
-5.) create sql query to create table in DB.
+5.) create sql query to create coupe table in DB.
 
 #create coupe table
 create_coupe_table = """
@@ -95,6 +95,31 @@ make VARCHAR(50) NOT NULL,
 model VARCHAR(50) NOT NULL,
 mileage integer NOT NULL,
 price integer NOT NULL);"""
+
+execute_query(connection, create_coupe_table )
+
+6.) create sql query to create SUV table in DB.
+
+#create suv table
+create_suv_table = """
+create table SUV_MODELS(
+vin_number VARCHAR(12) PRIMARY KEY,
+make VARCHAR(50) NOT NULL,
+model VARCHAR(50) NOT NULL,
+mileage integer NOT NULL,
+price integer NOT NULL);
+"""
+#calling statement using work horse function:
+execute_query(connection, create_suv_table )
+
+7.) populate coupe table:
+
+
+#populate coupe table
+coupe_vehicles = """ < ----- create variable to hold query
+insert into COUPE_MODELS values
+('123abc321','Ashton Martin', 'Vanquish', 200, 115000),
+('asd748541', 'Audi', 'RS 7', 1200, 12500) """  <--- end of value
 
 
 

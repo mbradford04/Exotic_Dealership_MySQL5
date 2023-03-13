@@ -21,4 +21,11 @@ operations.
 3.) Create database from main.py
 *insert screenshot of successful creation of database
 
+4.) Create coupe table for DB: 
+*insert screenshot of creation of table.
+
+5.) Create SUV table for DB: 
+*insert screenshot of creation of table.
+
+
 
