@@ -13,9 +13,12 @@ operations.
     manipulating numerical tables and time series.
     
 1.) Establish communication from pycharm to mysql
-
 * insert screenshot of connection
 
 2.) Establish communication from main.py to mysql: 
-
 *insert screenshot of successful connection. 
+
+3.) Create database from main.py
+*insert screenshot of successful creation of database
+
+

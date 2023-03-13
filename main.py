@@ -14,6 +14,8 @@ def create_server_connection(host_name, user_name, user_password):
     except Error as err:
         print(f"Error {err}")
     return connection
+
+
 def create_database(connection, query):
     cursor = connection.cursor()
     try:
