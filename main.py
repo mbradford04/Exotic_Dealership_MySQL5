@@ -25,6 +25,17 @@ def create_database(connection, query):
     except Error as err:
         print(f"Error: {err}")
 
+
+def execute_query(connection, query):
+    cursor = connection.cursor()
+    try:
+        cursor.execute(query)
+        connection.commit()
+        print("Query sucessful")
+    except Error as err:
+        print(f"Error: {err}")
+
+
 #Queries
 create_database_query = "create database EXOTIC_DEALERSHIP"
 

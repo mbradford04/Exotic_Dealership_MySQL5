@@ -78,6 +78,21 @@ connection = create_server_connection("localhost", "root", "student","exotic_dea
 
 
 
+4.) Place work horse function to run queries:
+
+
+def execute_query(connection, query):
+    cursor = connection.cursor()
+    try:
+        cursor.execute(query)
+        connection.commit()
+        print("Query sucessful")
+    except Error as err:
+        print(f"Error: {err}")
+
+
+
+
 
 
 
