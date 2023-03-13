@@ -39,7 +39,6 @@ def execute_query(connection, query):
 #Queries
 create_database_query = "create database EXOTIC_DEALERSHIP"
 
-
 #create coupe table
 create_coupe_table = """  
 create table COUPE_MODELS(
@@ -65,8 +64,15 @@ insert into COUPE_MODELS values
 ('123abc321','Ashton Martin', 'Vanquish', 200, 115000),
 ('asd748541', 'Audi', 'RS 7', 1200, 12500) """
 
+#populate suv table
+suv_table = """
+insert into SUV_MODELS values
+('123abc321','Lamborghini', 'Urus', 787, 135000),
+('asd748541', 'BMW', 'X5', 1200, 12500) """
+
+
 #calling statement
 connection = create_server_connection("localhost", "root", "student","exotic_dealership")
 #call work horse function to run query
-execute_query(connection, coupe_vehicles )
+execute_query(connection, suv_table)
 
