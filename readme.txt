@@ -72,14 +72,9 @@ def create_server_connection(host_name, user_name, user_password, db_name): <---
     except Error as err:
         print(f"Error {err}")
     return connection
-
-
 connection = create_server_connection("localhost", "root", "student","exotic_dealership") <-- place DB name
 
-
-
 4.) Place work horse function to run queries:
-
 
 def execute_query(connection, query):
     cursor = connection.cursor()
@@ -89,6 +84,18 @@ def execute_query(connection, query):
         print("Query sucessful")
     except Error as err:
         print(f"Error: {err}")
+
+5.) create sql query to create table in DB.
+
+#create coupe table
+create_coupe_table = """
+create table COUPE_MODELS(
+vin_number VARCHAR(12) PRIMARY KEY,
+make VARCHAR(50) NOT NULL,
+model VARCHAR(50) NOT NULL,
+mileage integer NOT NULL,
+price integer NOT NULL);"""
+
 
 
 

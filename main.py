@@ -39,8 +39,28 @@ def execute_query(connection, query):
 #Queries
 create_database_query = "create database EXOTIC_DEALERSHIP"
 
+
+#create coupe table
+create_coupe_table = """  
+create table COUPE_MODELS(
+vin_number VARCHAR(12) PRIMARY KEY,
+make VARCHAR(50) NOT NULL,
+model VARCHAR(50) NOT NULL,
+mileage integer NOT NULL,
+price integer NOT NULL);"""
+
+#create suv table
+create_suv_table = """
+create table SUV_MODELS(
+vin_number VARCHAR(12) PRIMARY KEY,
+make VARCHAR(50) NOT NULL,
+model VARCHAR(50) NOT NULL,
+mileage integer NOT NULL,
+price integer NOT NULL);
+"""
+
 #calling statement
 connection = create_server_connection("localhost", "root", "student","exotic_dealership")
-#call create_database function to create DB in mySQL
+#call work horse function to run query
+execute_query(connection, create_suv_table )
 
-create_database(connection, create_database_query)
