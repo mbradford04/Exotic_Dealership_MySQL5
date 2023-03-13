@@ -103,10 +103,17 @@ SET mileage = 2000
 where vin_number = '123abc321'
 """
 
+
+#delete value from table
+remove_firstCoupe_vehicle = """
+DELETE FROM COUPE_MODELS
+WHERE vin_number = '123abc321';"""
+
+
 #calling statement
 connection = create_server_connection("localhost", "root", "student","exotic_dealership")
 #call work horse function to run query
-execute_query(connection, update_firstCoupe_mileage)
+execute_query(connection, remove_firstCoupe_vehicle)
 
 #call read query function to fetch information from MySQL
 results = read_query(connection, display_coupe_models_table)

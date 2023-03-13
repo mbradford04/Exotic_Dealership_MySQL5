@@ -175,3 +175,6 @@ update suv_models
 SET mileage = 5000
 where vin_number = '123abc321'
 """
+
+execute_query(connection, update_firstSUV_mileage)
+
