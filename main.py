@@ -35,6 +35,16 @@ def execute_query(connection, query):
     except Error as err:
         print(f"Error: {err}")
 
+def read_query(connection, query):
+    cursor = connection.cursor()
+    result = None
+    try:
+        cursor.execute(query)
+        result = cursor.fetchall()
+        return result
+    except Error as err:
+        print(f"Error: {err}")
+
 
 #Queries
 create_database_query = "create database EXOTIC_DEALERSHIP"
@@ -71,8 +81,35 @@ insert into SUV_MODELS values
 ('asd748541', 'BMW', 'X5', 1200, 12500) """
 
 
+#read values from coupe table
+display_coupe_models_table = """
+SELECT * FROM COUPE_MODELS;
+"""
+
+#read values from suv table
+display_suv_models_table = """
+SELECT * FROM SUV_MODELS;
+"""
+
+update_firstSUV_mileage = """
+update suv_models
+SET mileage = 5000
+where vin_number = '123abc321'
+"""
+
+update_firstCoupe_mileage = """
+update coupe_models
+SET mileage = 2000
+where vin_number = '123abc321'
+"""
+
 #calling statement
 connection = create_server_connection("localhost", "root", "student","exotic_dealership")
 #call work horse function to run query
-execute_query(connection, suv_table)
+execute_query(connection, update_firstCoupe_mileage)
 
+#call read query function to fetch information from MySQL
+results = read_query(connection, display_coupe_models_table)
+#iterate through the table to display all information
+for result in results:
+    print(result)

@@ -27,5 +27,15 @@ operations.
 5.) Create SUV table for DB: 
 *insert screenshot of creation of table.
 
+6.) Populate coupe table:
+*insert screenshot of table being populated 
+
+7.) Populate SUV table:
+*insert screenshot of table being populated 
+
+8.) create function to read data from tables
+*insert screenshot of values from table being displayed in PyCharm
+
+
 
 
