@@ -31,7 +31,7 @@ def execute_query(connection, query):
     try:
         cursor.execute(query)
         connection.commit()
-        print("Query sucessful")
+        print("Query successful")
     except Error as err:
         print(f"Error: {err}")
 

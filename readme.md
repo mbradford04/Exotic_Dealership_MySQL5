@@ -32,11 +32,11 @@ operations.
 
 7.) Populate SUV table:
 *insert screenshot of table being populated 
-
+![](Screenshot (61).png)
 8.) create function to read data from tables
 *insert screenshot of values from table being displayed in PyCharm
 
-
+![](../../OneDrive - New Horizons Computer Learning Center/Pictures/Screenshots/Screenshot (61).png)
 9.) display updated information in PyCharm: 
 8insert screenshot of value being updated from PyCharm
 
