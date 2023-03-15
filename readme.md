@@ -42,4 +42,4 @@ operations.
 
 10.) delete a value from a table
 
-
+![](Screenshot (61).png)
