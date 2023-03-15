@@ -41,5 +41,5 @@ operations.
 8insert screenshot of value being updated from PyCharm
 
 10.) delete a value from a table
-
+![image](Screenshot (61).png)
 ![](Screenshot (61).png)
